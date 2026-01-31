@@ -24,6 +24,9 @@ answers = [
 
 right_answer = ["1", "1", "1", "4", "3", "4"]
 
+prizes = [500, 2000, 5000, 10000, 25000, 50000]
+total_win = 0
+
 for j in range(len(questions)):
     print(questions[j])
     for i in range(4):
@@ -32,10 +35,16 @@ for j in range(len(questions)):
     user_answer = input("Ваш ответ(номер вопроса):")
 
     if right_answer[j] == user_answer:
-        print("Правильный ответ!")
+        total_win = prizes[j]
+        print(f"Правильный ответ! Вы выиграли {total_win} руб.")
     else:
-        print("Неправильный ответ!")
+        print(f"Неправильный ответ! К сожалению, вы проиграли. Ваш выигрыш: {total_win} руб.")
+        break
 
     print()
+
+if total_win == prizes[-1]:
+    print("Поздравляем! Вы стали миллионером (почти)!")
+
 
 
