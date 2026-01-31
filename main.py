@@ -38,7 +38,8 @@ for j in range(len(questions)):
         total_win = prizes[j]
         print(f"Правильный ответ! Вы выиграли {total_win} руб.")
     else:
-        print(f"Неправильный ответ! К сожалению, вы проиграли. Ваш выигрыш: {total_win} руб.")
+        total_win = 0
+        print(f"Неправильный ответ! К сожалению, вы проиграли все деньги. Ваш выигрыш: {total_win} руб.")
         break
 
     print()
